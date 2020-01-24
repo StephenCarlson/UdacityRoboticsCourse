@@ -1,2 +1,2 @@
 build/*
-!build/libminihawk_behavioral.so
+# !build/libminihawk_behavioral.so
