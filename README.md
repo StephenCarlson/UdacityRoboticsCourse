@@ -19,6 +19,7 @@ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/workspace/UdacityRoboticsC
 To run this:
 ```sh
 cd world
-gazebo MainWorld
+# gazebo MainWorld
+gazebo Roost.sdf
 ```
 
