@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "catkin_ws/src"
+		}
+	],
+	"settings": {
+		"python.autoComplete.extraPaths": [
+			"/home/steve/dev/Udacity-Robotics-Course/catkin_ws/devel/lib/python2.7/dist-packages",
+			"/opt/ros/melodic/lib/python2.7/dist-packages"
+		]
+	}
+}

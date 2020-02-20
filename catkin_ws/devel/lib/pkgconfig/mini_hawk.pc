@@ -1,0 +1,8 @@
+prefix=/home/steve/dev/Udacity-Robotics-Course/catkin_ws/devel
+
+Name: mini_hawk
+Description: Description of mini_hawk
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
