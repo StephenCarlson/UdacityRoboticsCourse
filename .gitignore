@@ -1,2 +1,5 @@
 build/*
 # !build/libminihawk_behavioral.so
+RoostScene.png
+catkin_ws/build/
+catkin_ws/devel/

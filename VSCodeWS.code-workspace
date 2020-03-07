@@ -8,6 +8,12 @@
 		"python.autoComplete.extraPaths": [
 			"/home/steve/dev/Udacity-Robotics-Course/catkin_ws/devel/lib/python2.7/dist-packages",
 			"/opt/ros/melodic/lib/python2.7/dist-packages"
-		]
+		],
+		"files.associations": {
+			"*.tcc": "cpp",
+			"string": "cpp",
+			"*.ipp": "cpp",
+			"system_error": "cpp"
+		}
 	}
 }
