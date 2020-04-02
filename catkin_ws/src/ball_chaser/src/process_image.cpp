@@ -27,24 +27,17 @@ void process_image_callback(const sensor_msgs::Image img)
     // ROS_INFO("Height: %d Width: %d", img.height, img.step);
 
     for (int i = 0; i < img.height * img.step; i++) {
-        // ROS_INFO("%d: %d", i, img.data[i]);
         int local = img.data[i];
         if (local>maxSeen) {
             maxSeen = local;
             indexOfTarget = (local >= white_pixel)? i : indexOfTarget;
-            
-            // break;
         }
     }
 
     int xCoord = indexOfTarget%img.step;
     int yCoord = indexOfTarget/img.step;
-    // ROS_INFO("%d at %d,%d", maxSeen, xCoord, yCoord);
-    // float turnAction = ((indexOfTarget % img.step)<(img.step/2)) ? 0.5f : -0.5f;
 
     float k_p = 0.0005;
-    // float k_i = 0.001;
-    // float k_d = 0.0;
     float error = (float)(1.0f * (indexOfTarget % img.step))-(1.0f * img.step/2.0f);
 
     float turnEffort = (-k_p) * error;
@@ -52,7 +45,7 @@ void process_image_callback(const sensor_msgs::Image img)
         (0.5f * ((img.step/2.0f) - abs(error))/1200.0f) : 
         0.0f;
 
-    ROS_INFO("%d at %d,%d, %1.2f: %1.2f, %1.2f", maxSeen, xCoord, yCoord, error, turnEffort, driveEffort);
+    // ROS_INFO("%d at %d,%d, %1.2f: %1.2f, %1.2f", maxSeen, xCoord, yCoord, error, turnEffort, driveEffort);
 
     drive_robot(driveEffort, turnEffort);
 }
